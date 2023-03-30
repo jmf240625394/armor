@@ -1,0 +1,49 @@
+# restricted-files，很多规则进行了合并，并不一定是安装注释分类的
+
+# Apache
+# (no slash; also guards against old.htaccess, old.htpasswd, etc.)
+\.ht(?:access|digest|passwd)
+
+# home level dotfiles (keep in sync with lfi-os-files.data)
+\.bash(?:_config|_history|logout|profile|rc)
+\.(?:ksh_|l|lldb-|mysql_|nano_|node_repl_|php_|psql_|python_|rediscli_|R|sh_|sqlite_|z|zsh_)history
+\.(?:csh|pear|vim|tcsh|zsh|net|bower|eslint|jshint)rc$
+\.(?:gitconfig|lesshst|nsr|profile|viminfo|xauthority|nsconfig|boto)
+\.(?:drush|gnupg|lftp|pki|ssh|subversion|aptitude|local|vidalia)/
+\.(?:idea|gitlab-ci\.yml|travis\.yml)
+(?:bower\.json|database\.yml|Dockerfile)
+
+# Version control
+/\.(?:git|hg|svn)/
+/\.(?:git|hg)ignore
+
+# Wordpress
+wp-config\.(?:php|bak|old|temp|tmp|txt)
+
+# Drupal
+/sites/default/(?:default\.settings\.php|settings\.php|settings\.local\.php)
+
+# dotenv & OSX & WS FTP
+/\.(?:env|DS_Store|ws_ftp\.ini)
+
+# Node
+/(?:package|package-lock|ormconfig|tsconfig)\.json
+/(?:gruntfile|webpack\.config)\.js
+/.*.lock
+
+# Composer
+/composer\.(?:json|lock)
+
+# New Top Level dotfiles
+\.(?:thunderbird|vmware|kube|java|anydesk|docker|npm|nvm|minikube|atom|cups|dbus|gem|gnonme|gsutil)/
+\.aws/(?:config|credentials)
+
+# 配置
+(?:config.*|parameters|routing|security|services)\.(?:yml|yaml)$
+(?:var/log|logs|conf|confs|config|nbproject)/.*\.(conf|passwd|db)$
+.*\.properties$
+(?:my|php)\.(?:ini|conf)$
+/etc/.*\.conf
+
+# 日志
+/.*\.(log[_\.]?[0-9]*|err[_\.]?[0-9]*|out[_\.]?[0-9]*)$

@@ -1,0 +1,10 @@
+# 添加规则或者修改前确认一下关键字是否存在
+
+# 常见的安全扫描工具user_agent的关键字
+(?:sql|scan|inspect|injector|nmap|nessus|analyzer|w3af|black|python|nikto|havij|hydra|sf/|grabber|arachni|bilbo|n-stealth|brutus|netsparker|jaascois|pmafind|nasl|audit|paros|dirbuster|track|pycurl)
+
+# 常见压力测试user_agent
+(?:bench|wrk)
+
+# 常见爬虫的user_agent的关键字
+(?:craw|walker|^web\w+|\w+web$|spider|injection|email|widows|powered|client$|floodgate|bot$|bandit|extractorpro|attache|toolkit|pcbrowser|psurf|agent$|no browser|search|exploit|via|ninja|collector|backdoor|stress|test|foobar|stalker|unspecified|machine|zeus|voideye|chinaclaw|downloader|\w+@\w+|safexplorer|fiddler|internet|w3mir|athens|^Mozilla/4.0 \(compatible;)

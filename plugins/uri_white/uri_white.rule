@@ -1,0 +1,26 @@
+# url白名单，注意：
+# 1. 如果不写域名：将只匹配uri
+# 2. 如果不写uri：将只匹配域名，只要匹配到域名了，后续的域名和uri都忽略
+# 3. 域名与uri分隔符使用;;
+# 4. 如果没有;;符号，此行将作废;
+# 5. uri可以使用正则（PCRE），参考https://blog.csdn.net/lanwangxia/article/details/106992047
+    # 如果一行既有域名，又有uri，uri部分不支持^开头符号
+    # uri以/结尾，表示目录，比如：/m/，后台会自动解析成/m/\S*规则
+
+www.abc.com;;/cgi
+napp.abc.com;;/hello
+napp.abc.com;;/gate
+napp.abc.com;;/tongyi/gate
+napp.abc.com;;
+m.abc.com;;/abc/
+www.abc.com;;pdf
+;;/app
+;;/m/
+;;/a\w*p
+;;/tongyi
+www.abc.com;;/cgi/abc
+www.abc.com/;;
+napp.abc.com;;/tongyi/gate/
+a.abc.com;pqa
+m.abc.com;;/\w+bc
+img.abc.com;;/abc/
